@@ -9,11 +9,11 @@ Here for windows, ~ means the home folder of current user. Default is `C:/User/y
 
 2. Link to the configuration file:
 
-For linux
-```vim
-ln -s ~/.vim/vimrc ~/.vimrc
-```
-For windows, copy vimrc to the gvim install folder and change the name to *vimrc*.
+    For linux
+    ```vim
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ```
+    For windows, copy vimrc to the gvim install folder and change the name to *vimrc*.
 
 3. Install Vundle
 ```vim
