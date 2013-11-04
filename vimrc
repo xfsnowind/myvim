@@ -4,16 +4,13 @@
 " tl                        打开TagList [非插入模式]
 " TT                        new line above 在光標上面創建新一行
 " tt                        new line below 在光標下面創建新一行
-
-
 version 7.3
-
 set nocompatible						" be Improved
 source ~/.vim/bundles.vim         " get and install all the plugins in windows 為windows安裝所有插件
 " color scheme
 " colorscheme blackboard					" background color 背景顏色
-if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
-  set t_Co=256
+if ($COLORTERM == 'gnome-terminal' || $TERM == 'screen')
+    set t_Co=256
 endif
 
 "if has("gui_running")
@@ -34,6 +31,7 @@ set shiftwidth=4						"
 set autoindent							" indent auto 自動對齊
 set smartindent							" smart indent 只能對齊
 set backspace=2							" set back space, check "help backspace" 設置退格鍵可用
+set ff=unix                             " set file type as unix to avoid showing ^M
 
 set ai
 set nu									" show line number 顯示行號
