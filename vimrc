@@ -44,7 +44,7 @@ set listchars=tab:\|\ ,
 set hlsearch							" highlight search - show current search pattern 高亮顯示搜索結果
 set incsearch							" incremental search
 set magic								" set magic for search 用點魔法設置搜索
-
+set ignorecase                          " ignore the case 忽略大小写
 set nowritebackup						" no back up file when writing 設置無備份文件
 set noswapfile							" no swap file when writing 設置無swap文件
 set nobackup
