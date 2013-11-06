@@ -15,8 +15,8 @@ endif
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'                " manage the files/folders
+Bundle 'scrooloose/syntastic'               " syntax and highlight
 " original repos on github
 " vim-scripts repos
 " Bundle 'L9'
