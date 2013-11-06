@@ -15,8 +15,14 @@ endif
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-Bundle 'scrooloose/nerdtree'                " manage the files/folders
-Bundle 'scrooloose/syntastic'               " syntax and highlight
+" for system file tree
+Bundle 'scrooloose/nerdtree'
+
+" highlight according to syntax of different types of file
+Bundle 'scrooloose/syntastic'
+
+" core killer feature of sublime text, multiple selector
+Bundle 'vim-multiple-cursors'
 " original repos on github
 " vim-scripts repos
 " Bundle 'L9'
