@@ -21,6 +21,9 @@ Bundle 'scrooloose/nerdtree'
 " highlight according to syntax of different types of file
 Bundle 'scrooloose/syntastic'
 
+" snipmate
+Bundle 'msanders/snipmate.vim'
+
 " core killer feature of sublime text, multiple selector
 Bundle 'vim-multiple-cursors'
 " original repos on github
