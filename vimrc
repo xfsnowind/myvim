@@ -4,6 +4,11 @@
 " tl                        打开TagList [非插入模式]
 " TT                        new line above 在光標上面創建新一行
 " tt                        new line below 在光標下面創建新一行
+" Ctrl + n                  find next item for multiple selecting in NORMAL Mode 找到下一个相同的字符来进行多重选择
+" Ctrl + x                  skip the item for multiple selecting in NORMAL Mode 跳过当前字符
+" Ctrl + p                  go to previous item for multiple selecting in NORMAL MODE 回到前一个字符
+" Ctrl + n                  auto-complete in INSERT MODE 插入模式下自动补全
+" 
 version 7.3
 set nocompatible						" be Improved
 source ~/.vim/bundles.vim         " get and install all the plugins in windows 為windows安裝所有插件
@@ -33,7 +38,7 @@ set smartindent							" smart indent 只能對齊
 set backspace=2							" set back space, check "help backspace" 設置退格鍵可用
 set ff=unix                             " set file type as unix to avoid showing ^M
 
-set ai
+set ai                                  " turn on auto indentation 打开自动缩进
 set nu									" show line number 顯示行號
 set showmatch							" show matched bracked 顯示括號匹配情況
 set cursorline							" highlight current line 突出顯示當前行
@@ -55,9 +60,11 @@ set autochdir							" set current directory as root directory of file explorer �
 set laststatus=2						" open status line 開啟狀態欄信息
 set cmdheight=2							" set command line's height, default 1, here 2 設置命令行高度,默認是1,這裡為2
 
+set lisp                                " modify bracket for lisp compatibility 
+set prompt                              " Prompts for command input with : 自动添加冒号
 
 " use underscore when exceeds 80 chars 每行超過80個字符的用下劃線標示
-au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.cc,*.java,*.cs,*.erl,*.hs,*.sh,*.lua,*.pl,*.pm,*.php,*.py,*.rb,*.erb,*.vim,*.js,*.css,*.xml,*.html,*.xhtml 2match Underlined /.\%81v/
+" au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.cc,*.java,*.cs,*.erl,*.hs,*.sh,*.lua,*.pl,*.pm,*.php,*.py,*.rb,*.erb,*.vim,*.js,*.css,*.xml,*.html,*.xhtml 2match Underlined /.\%81v/
 
 
 
@@ -109,17 +116,17 @@ map TT I<CR><ESC>k
 
 ":inoremap [ []<ESC>i
 
-:inoremap ] <c-r>=ClosePair(']')<CR>
+":inoremap ] <c-r>=ClosePair(']')<CR>
 
-:inoremap < <><ESC>i
+":inoremap < <><ESC>i
 
-:inoremap > <c-r>=ClosePair('>')<CR>
+":inoremap > <c-r>=ClosePair('>')<CR>
 
 ":inoremap " ""<ESC>i
 
 ":inoremap ' ''<ESC>i
 
-:inoremap ` ``<ESC>i
+":inoremap ` ``<ESC>i
 
 function ClosePair(char)
     if getline('.')[col('.') - 1] == a:char
@@ -128,4 +135,3 @@ function ClosePair(char)
         return a:char
     endif
 endf
-

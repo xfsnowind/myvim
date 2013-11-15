@@ -1,5 +1,4 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+
 
 if has('win32') || has('win64')
     set rtp+=~/.vim/bundle/vundle/
@@ -25,7 +24,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
 
 " core killer feature of sublime text, multiple selector
-Bundle 'vim-multiple-cursors'
+" Bundle 'vim-multiple-cursors'
+
+" comment the codes
+Bundle 'tpope/vim-commentary'
+
+" fast write html/css tags
+Bundle 'mattn/emmet-vim'
 " original repos on github
 " vim-scripts repos
 " Bundle 'L9'
