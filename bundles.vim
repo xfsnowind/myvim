@@ -23,9 +23,6 @@ Bundle 'scrooloose/syntastic'
 " snipmate
 Bundle 'msanders/snipmate.vim'
 
-" core killer feature of sublime text, multiple selector
-" Bundle 'vim-multiple-cursors'
-
 " comment the codes
 Bundle 'tpope/vim-commentary'
 
@@ -35,10 +32,8 @@ Bundle 'mattn/emmet-vim'
 " vim-scripts repos
 " Bundle 'L9'
 
-
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
-
 
 " git repos on your local machine (ie. when working on your own plugin)
 " Bundle 'file:///Users/gmarik/path/to/plugin'

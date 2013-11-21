@@ -1,14 +1,27 @@
 " jj                        save file and stay INSERT MODE (use in INSERT MODE) 保存文件并留在插入模式 [插入模式]
 " kk                        switch to NORMAL MODE (use in INSERT MODE) 返回Normal模式 [插入模式]
+
 " nt                        Open NERDTree 打开NERDTree [非插入模式]
 " tl                        打开TagList [非插入模式]
+
 " TT                        new line above 在光標上面創建新一行
 " tt                        new line below 在光標下面創建新一行
+
 " Ctrl + n                  find next item for multiple selecting in NORMAL Mode 找到下一个相同的字符来进行多重选择
 " Ctrl + x                  skip the item for multiple selecting in NORMAL Mode 跳过当前字符
 " Ctrl + p                  go to previous item for multiple selecting in NORMAL MODE 回到前一个字符
+
 " Ctrl + n                  auto-complete in INSERT MODE 插入模式下自动补全
-" 
+
+" gcc                       comment/uncomment the current line 注释/非注释掉当前行
+" gc                        comment/uncomment the selected part in VISUAL MODE 注释/非注释掉VISUAL模式下的文本
+
+"***************************share vim with system clipboard, but have to install full-vim*****
+"***************************for linxu, install vim-gnome(for gnome)***************************
+" "*yy                      copy the whole line to system clipboard copy 当前行到系统粘贴板
+" "*dd                      delete the whole line and save it to the system clipboard 删除整行并保存到系统粘贴板
+" "*p                       paste the content of system clipboard to vim 粘贴系统粘贴板的内容到vim
+
 version 7.3
 set nocompatible						" be Improved
 source ~/.vim/bundles.vim         " get and install all the plugins in windows 為windows安裝所有插件
@@ -62,6 +75,7 @@ set cmdheight=2							" set command line's height, default 1, here 2 設置命�
 
 set lisp                                " modify bracket for lisp compatibility 
 set prompt                              " Prompts for command input with : 自动添加冒号
+set clipboard=unnamed                   " it's for copy/parse between vim and system clipboard, but it only helps in windows 用来copy/paste到粘贴板
 
 " use underscore when exceeds 80 chars 每行超過80個字符的用下劃線標示
 " au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.cc,*.java,*.cs,*.erl,*.hs,*.sh,*.lua,*.pl,*.pm,*.php,*.py,*.rb,*.erb,*.vim,*.js,*.css,*.xml,*.html,*.xhtml 2match Underlined /.\%81v/
