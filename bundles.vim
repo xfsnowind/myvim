@@ -26,6 +26,9 @@ Bundle 'msanders/snipmate.vim'
 " comment the codes
 Bundle 'tpope/vim-commentary'
 
+" the replace of taglist
+Bundle 'majutsushi/tagbar'
+
 " fast write html/css tags
 Bundle 'mattn/emmet-vim'
 " original repos on github

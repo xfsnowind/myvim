@@ -2,7 +2,7 @@
 " kk                        switch to NORMAL MODE (use in INSERT MODE) 返回Normal模式 [插入模式]
 
 " nt                        Open NERDTree 打开NERDTree [非插入模式]
-" tl                        打开TagList [非插入模式]
+" tb                        打开tagbar[非插入模式]
 
 " TT                        new line above 在光標上面創建新一行
 " tt                        new line below 在光標下面創建新一行
@@ -98,7 +98,6 @@ set fileencodings=utf-8,gbk,cp936,latin-1
 
 
 
-
 """""""""""""""""""""""""""""""syntax setting""""""""""""""""""""""""""""""
 syntax enable							" enable syntax 打開語法高亮
 syntax on								" detect file type 打開文件類型偵測
@@ -118,7 +117,10 @@ imap jj <ESC>:w<CR>li
 imap kk <ESC>l
 
 " nt                    Open NERDTree 打开NERDTree [非插入模式]
-map nt :NERDTree<CR>
+map nt :NERDTreeToggle<CR>
+
+" tb                    Open tagbar 打开tagbar[非插入模式]
+map tb :TagbarToggle<CR>
 
 " tt                    new line below 在光標下面創建新一行
 map tt jI<CR><ESC>k
@@ -157,3 +159,10 @@ function ClosePair(char)
         return a:char
     endif
 endf
+
+
+
+""""""""""""""""""""""""""""""""settings of plugin 插件配置""""""""""""""""""""""""""""""""
+" tagbar
+let g:tagbar_autofocus = 1
+let g:tagbar_show_linenumbers = 1
