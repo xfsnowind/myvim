@@ -51,6 +51,7 @@ endif
 set tabstop=4							" set width of tab key 設置tab鍵寬度
 set expandtab							" convert tab to space 轉換tab鍵為空格
 set shiftwidth=4						" 
+set textwidth=0                         " don't word wrap
 set autoindent							" indent auto 自動對齊
 set smartindent							" smart indent 只能對齊
 set backspace=2							" set back space, check "help backspace" 設置退格鍵可用
@@ -72,7 +73,7 @@ set nowritebackup						" no back up file when writing 設置無備份文件
 set noswapfile							" no swap file when writing 設置無swap文件
 set nobackup
 
-set wrap								" set wrap 自動換行
+set nowrap								" set nowrap 不要自動換行
 set wrapscan							" keep searching when meet the file border 搜索到文件兩端時重新搜索
 set autochdir							" set current directory as root directory of file explorer 設定文件瀏覽器目錄為當前目錄
 set laststatus=2						" open status line 開啟狀態欄信息
