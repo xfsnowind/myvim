@@ -22,6 +22,11 @@
 " "*dd                      delete the whole line and save it to the system clipboard 删除整行并保存到系统粘贴板
 " "*p                       paste the content of system clipboard to vim 粘贴系统粘贴板的内容到vim
 
+" RECOMMEND TO USE fish shell: fishshell.com, for ubuntu, install it with:
+" sudo apt-get install fish
+" then set default shell as this fish: chsh -s /usr/bin/fish
+
+
 version 7.3
 set nocompatible						" be Improved
 source ~/.vim/bundles.vim         " get and install all the plugins in windows 為windows安裝所有插件
@@ -76,6 +81,9 @@ set cmdheight=2							" set command line's height, default 1, here 2 設置命�
 set lisp                                " modify bracket for lisp compatibility 
 set prompt                              " Prompts for command input with : 自动添加冒号
 set clipboard=unnamed                   " it's for copy/parse between vim and system clipboard, but it only helps in windows 用来copy/paste到粘贴板
+
+set timeout timeoutlen=500              " set waiting time to 100ms 设置相应时间为100ms
+set ttimeoutlen=500
 
 " use underscore when exceeds 80 chars 每行超過80個字符的用下劃線標示
 " au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.cc,*.java,*.cs,*.erl,*.hs,*.sh,*.lua,*.pl,*.pm,*.php,*.py,*.rb,*.erb,*.vim,*.js,*.css,*.xml,*.html,*.xhtml 2match Underlined /.\%81v/
