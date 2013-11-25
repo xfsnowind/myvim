@@ -22,6 +22,8 @@
 " "*dd                      delete the whole line and save it to the system clipboard 删除整行并保存到系统粘贴板
 " "*p                       paste the content of system clipboard to vim 粘贴系统粘贴板的内容到vim
 
+" ClearRegisters            clear the registers 清除寄存器
+
 " RECOMMEND TO USE fish shell: fishshell.com, for ubuntu, install it with:
 " sudo apt-get install fish
 " then set default shell as this fish: chsh -s /usr/bin/fish
@@ -99,9 +101,12 @@ endif
 """"""""""""""""""""""""""""""language setting"""""""""""""""""""""""""""""
 set fenc=utf-8
 set encoding=utf-8
-set fileencodings=utf-8,gbk,cp936,latin-1
-
-
+" 解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+language message zh_CN.UTF-8
+set fileencodings=utf-8,gb18030,ucs-bom,cp936,gb2312,big5,euc-jp,euc-kr,latin1
+set termencoding=utf-8,gb18030,ucs-bom,cp936,gb2312,big5,euc-jp,euc-kr,latin1
 
 """""""""""""""""""""""""""""""syntax setting""""""""""""""""""""""""""""""
 syntax enable							" enable syntax 打開語法高亮
@@ -171,3 +176,16 @@ endf
 " tagbar
 let g:tagbar_autofocus = 1
 let g:tagbar_show_linenumbers = 1
+
+
+""""""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
+function! ClearRegisters()
+    let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
+    let i=0
+    while (i<strlen(regs))
+        exec 'let @'.regs[i].'=""'
+        let i=i+1
+    endwhile
+endfunction
+ 
+command! ClearRegisters call ClearRegisters()
