@@ -86,6 +86,10 @@ set clipboard=unnamed                   " it's for copy/parse between vim and sy
 set timeout timeoutlen=500              " set waiting time to 100ms 设置相应时间为100ms
 set ttimeoutlen=500
 
+if $SHELL =~ 'bin/fish'
+    set shell=/bin/sh
+endif
+
 " use underscore when exceeds 80 chars 每行超過80個字符的用下劃線標示
 " au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.cc,*.java,*.cs,*.erl,*.hs,*.sh,*.lua,*.pl,*.pm,*.php,*.py,*.rb,*.erb,*.vim,*.js,*.css,*.xml,*.html,*.xhtml 2match Underlined /.\%81v/
 
