@@ -20,17 +20,21 @@ Bundle 'scrooloose/nerdtree'
 " highlight according to syntax of different types of file
 Bundle 'scrooloose/syntastic'
 
-" snipmate
+" snipmate, quick edit file with like 'for<tab>'
 Bundle 'msanders/snipmate.vim'
 
 " comment the codes
 Bundle 'tpope/vim-commentary'
 
-" the replace of taglist
+" the replace of taglist, quite powerful
 Bundle 'majutsushi/tagbar'
+
+" editorconfig which is used to maintain the code style between IDEs
+Bundle 'editorconfig/editorconfig-vim'
 
 " fast write html/css tags
 Bundle 'mattn/emmet-vim'
+
 " original repos on github
 " vim-scripts repos
 " Bundle 'L9'
