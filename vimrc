@@ -67,7 +67,7 @@ if has("gui_running")
     colorscheme darkZ
 elseif &t_Co >= 256
     colorscheme desert
-else 
+else
     colorscheme tango
 endif
 
@@ -76,7 +76,7 @@ endif
 set background=dark                     " set background color
 "設置背景顏色
 
-set tabstop=4                           " set width of tab key 設置tab鍵寬度 
+set tabstop=4                           " set width of tab key 設置tab鍵寬度
 set expandtab                           " convert tab to space 轉換tab鍵為空格
 set shiftwidth=4                        " 
 set autoindent                          " indent auto 自動對齊
@@ -116,7 +116,7 @@ set title                               " title for xterm windows
 set guioptions+=r                       " show the right side scroll bar 顯示右側滾動欄
 set list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×   " show invisible chars
 
-set lisp                                " modify bracket for lisp compatibility 
+set lisp                                " modify bracket for lisp compatibility
 set prompt                              " Prompts for command input with : 自动添加冒号
 set clipboard=unnamed                   " it's for copy/parse between vim and system clipboard, but it only helps in windows 用来copy/paste到粘贴板
 
@@ -207,7 +207,7 @@ let g:tagbar_show_linenumbers = 1
 
 """""""""""""""" NERDTREE
 " If only the NERDTree is left when closing buffers, quit vim
-autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 
