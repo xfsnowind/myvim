@@ -42,6 +42,7 @@ set nocompatible            " be Improved
 source ~/.vim/bundles.vim   " get and install all the plugins in windows 為windows安裝所有插件
 
 
+
 """"""""""""""""""""""""""""""language setting"""""""""""""""""""""""""""""
 set fenc=utf-8 
 set encoding=utf-8
@@ -51,6 +52,15 @@ source $VIMRUNTIME/menu.vim
 language message zh_CN.UTF-8 
 set fileencodings=utf-8,gb18030,ucs-bom,cp936,gb2312,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8,gb18030,ucs-bom,cp936,gb2312,big5,euc-jp,euc-kr,latin1
+
+
+
+""""""""""""""""""""""""""""""person information setting"""""""""""""""""""""""""""""
+" Email and name
+iab EMAIL xfsnowind@gmail.com
+iab MYNAME Feng Xue
+" Current date and time
+iab YDATE <C-R>=strftime("%a %d %b %T %Y")<CR>
 
 
 
