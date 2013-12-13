@@ -13,9 +13,9 @@
 " gc                        comment/uncomment the selected part in VISUAL MODE 注释/非注释掉VISUAL模式下的文本
 
 " >>                        indent the current line in NORMAL MODE Normal模式下向後縮進 
-" <<                        deindent the current line in NORMAL MODE Normal模式下向前縮進 
+" <<                        outdent the current line in NORMAL MODE Normal模式下向前縮進 
 " 3>                        indent 3 times the selected lines in VISUAL MODE Visual模式下對選中的行縮進3次
-" 2<                        deindent 2 times the selected lines in VISUAL MODE Visual模式下對選中的行反縮進2次
+" 2<                        outndent 2 times the selected lines in VISUAL MODE Visual模式下對選中的行反縮進2次
 
 "***************************share vim with system clipboard, but have to install full-vim***** 
 "***************************for linxu, install vim-gnome(for gnome)*************************** 
@@ -32,7 +32,12 @@
 
 
 """"""""""""""""""""""""""""""basic setting"""""""""""""""""""""""""""""
-version 7.3 
+version 7.3
+" this have to cooperate with fish shell, you can install fishshell with
+" sudo apt-get install fish
+if $SHELL =~ 'bin/fish'
+    set shell=/bin/sh
+endif
 set nocompatible            " be Improved
 source ~/.vim/bundles.vim   " get and install all the plugins in windows 為windows安裝所有插件
 
@@ -55,17 +60,20 @@ if ($COLORTERM == 'gnome-terminal' || $TERM == 'screen')
     set t_Co=256
 endif
 
-"if has("gui_running")
-"    colorscheme molokai
-"elseif &t_Co >= 256
-"    colorscheme zenburn
-"else 
-"    colorscheme tango
-"endif
+" To select the favourite color scheme, check this: https://code.google.com/p/vimcolorschemetest/
+" Checkout it with svn and open the file svn/html/index-html.html
+
+if has("gui_running")
+    colorscheme darkZ
+elseif &t_Co >= 256
+    colorscheme desert
+else 
+    colorscheme tango
+endif
 
 
 """"""""""""""""""""""""""""""file global settings""""""""""""""""""""""""""""""""
-"set background=dark                     " set background color
+set background=dark                     " set background color
 "設置背景顏色
 
 set tabstop=4                           " set width of tab key 設置tab鍵寬度 
@@ -73,6 +81,7 @@ set expandtab                           " convert tab to space 轉換tab鍵為�
 set shiftwidth=4                        " 
 set autoindent                          " indent auto 自動對齊
 set smartindent                         " smart indent 只能對齊
+set esckeys                             " allow usage of cursor keys within insert mode
 set backspace=2                         " set back space, check "help backspace" 設置退格鍵可用
 set ff=unix                             " set file type as unix to avoid showing
 
@@ -87,6 +96,7 @@ set listchars=tab:\|\ ,
 set hlsearch                            " highlight search - show current search pattern 高亮顯示搜索結果
 set incsearch                           " incremental search
 set magic                               " set magic for search 用點魔法設置搜索
+set lazyredraw                          " do not update screen while executing macros
 set ignorecase                          " ignore the case 忽略大小写
 set nowritebackup                       " no back up file when writing 設置無備份文件
 set noswapfile                          " no swap file when writing 設置無swap文件
@@ -97,8 +107,14 @@ set textwidth=0                         " do not wrap the line hard 超出範圍
 set wrap linebreak                      " set wrap and break line softly, do not wrap the line hard 當超出屏幕範圍時，自動以不插入換行符的形式換行
 set wrapscan                            " keep searching when meet the file border 搜索到文件兩端時重新搜索
 set autochdir                           " set current directory as root directory of file explorer 設定文件瀏覽器目錄為當前目錄
+
 set laststatus=2                        " open status line 開啟狀態欄信息
 set cmdheight=2                         " set command line's height, default 1, here 2 設置命令行高度,默認是1,這裡為2
+set showcmd                             " show current uncompleted command 顯示未完成的命令
+set showmode                            " show the current mode 顯示當前命令
+set title                               " title for xterm windows
+set guioptions+=r                       " show the right side scroll bar 顯示右側滾動欄
+set list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×   " show invisible chars
 
 set lisp                                " modify bracket for lisp compatibility 
 set prompt                              " Prompts for command input with : 自动添加冒号
@@ -107,16 +123,8 @@ set clipboard=unnamed                   " it's for copy/parse between vim and sy
 set timeout timeoutlen=500              " set waiting time to 100ms 设置相应时间为100ms
 set ttimeoutlen=500
 
-" this have to cooperate with fish shell, you can install fishshell with
-" sudo apt-get install fish
-if $SHELL =~ 'bin/fish' 
-    set shell=/bin/sh
-endif
-
 " use underscore when exceeds 80 chars 每行超過80個字符的用下劃線標示
 au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.cc,*.java,*.cs,*.erl,*.hs,*.sh,*.lua,*.pl,*.pm,*.php,*.py,*.rb,*.erb,*.vim,*.js,*.css,*.xml,*.html,*.xhtml 2match Underlined /.\%81v/
-
-
 
 
 
@@ -182,6 +190,13 @@ function ClosePair(char)
         return a:char
     endif
 endf
+
+
+
+""""""""""""""""""""""""""""""""auto correct""""""""""""""""""""""""""""""""
+" ABBREVIATIONS
+iab seperate separate
+iab teh th
 
 
 
