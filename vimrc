@@ -144,11 +144,11 @@ map TT I<CR><ESC>k
 
 :inoremap ) <c-r>=ClosePair(')')<CR>
 
-":inoremap { {}<ESC>i
+:inoremap { {}<ESC>i
 
-":inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap } <c-r>=ClosePair('}')<CR>
 
-":inoremap [ []<ESC>i
+:inoremap [ []<ESC>i
 
 ":inoremap ] <c-r>=ClosePair(']')<CR>
 
@@ -177,7 +177,8 @@ endf
 let g:tagbar_autofocus = 1
 let g:tagbar_show_linenumbers = 1
 
-
+" NERDTree
+let g:NERDTreeWinSize = 40 
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
 function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
