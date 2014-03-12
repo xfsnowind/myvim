@@ -163,10 +163,10 @@ map nt :NERDTreeToggle<CR>
 map tb :TagbarToggle<CR>
 
 " tt                    new line below 在光標下面創建新一行
-map tt jI<CR><ESC>k
+map tt A<CR><ESC>0
 
 " TT                    new line above 在光標上面創建新一行
-map TT I<CR><ESC>k
+map TT kA<CR><ESC>0
 
 
 
