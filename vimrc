@@ -175,7 +175,7 @@ map TT kA<CR><ESC>0
 
 :inoremap ) <c-r>=ClosePair(')')<CR>
 
-:inoremap { {}<ESC>i
+:inoremap { {}<ESC>i<CR><ESC>kA<CR>
 
 :inoremap } <c-r>=ClosePair('}')<CR>
 
