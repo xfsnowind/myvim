@@ -3,7 +3,7 @@ myvim
 
 1. Install it with git clone:
 ```vim
-git clone git@github.com:xfsnowind/myvim.git
+git clone git@github.com:xfsnowind/myvim.git ~/.vim
 ```
 Here for windows, ~ means the home folder of current user. Default is `C:/User/yourusername`.
 
