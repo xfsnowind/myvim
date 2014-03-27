@@ -3,7 +3,7 @@ myvim
 
 1. Install it with git clone:
 ```vim
-git clone https://github.com/xfsnowind/myvim.git ~/.vim
+git clone git@github.com:xfsnowind/myvim.git
 ```
 Here for windows, ~ means the home folder of current user. Default is `C:/User/yourusername`.
 
@@ -17,7 +17,7 @@ Here for windows, ~ means the home folder of current user. Default is `C:/User/y
 
 3. Install Vundle
 ```vim
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone git@github.com:gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
 4. Then, open vim and type :BundleInstall in the command
