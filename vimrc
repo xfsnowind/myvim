@@ -1,33 +1,45 @@
-" jj                        save file and stay INSERT MODE (use in INSERT MODE) || 保存文件并留在插入模式 [插入模式] 
-" kk                        switch to NORMAL MODE (use in INSERT MODE) || 返回Normal模式 [插入模式]
+" jj                                    save file and stay INSERT MODE (use in INSERT MODE) || 保存文件并留在插入模式 [插入模式]
+" kk                                    switch to NORMAL MODE (use in INSERT MODE) || 返回Normal模式 [插入模式]
 
-" nt                        Open NERDTree (use in NORMAL MODE) || 打开NERDTree [非插入模式] 
-" tb                        Open tagbar (use in NORMAL MODE) || 打开tagbar[非插入模式]
+" nt                                    Open NERDTree (use in NORMAL MODE) || 打开NERDTree [非插入模式]
+" 10<Ctrl-w> +/-/</> or :10winc >       have the split/vsplit window more/less 10 characters wide
+" <Ctr-W> = or :winc =                  make the split/vsplit window equal || 均分窗口
 
-" TT                        new line above || 在光標上面創建新一行 
-" tt                        new line below || 在光標下面創建新一行
+" tb                                    Open tagbar (use in NORMAL MODE) || 打开tagbar[非插入模式]
 
-" Ctrl + n                  auto-complete in INSERT MODE || 插入模式下自动补全
+" TT                                    new line above in NORMAL MODE || 非插入模式下在光標上面創建新一行并保持在非插入模式下
+" tt                                    new line below in NORMAL MODE ||  非插入模式下在光標下面創建新一行并保持在非插入模式下
+" O                                     new line above in NORMAL MODE and enter into INSERT MODE|| 非插入模式下在光標上面創建新一行并进入插入模式
+" o                                     new line below in NORMAL MODE and enter into INSERT MODE || 非插入模式下在光標下面創建新一行并进入插入模式
 
-" gcc                       comment/uncomment the current line || 注释/非注释掉当前行 
-" gc                        comment/uncomment the selected part in VISUAL MODE || 注释/非注释掉VISUAL模式下的文本
+" cw                                    delete from the cursor to the end of the word and enter into INSERT MODE || 删除到单词末尾并进入插入模式
+" ^                                     go to the last non-blank character of line || 到当前行非空末尾
+" g_                                    go to the first non-blank character of the line || 到当前行非空行首
+" ZZ == :wq == :x
+" NG                                    Go to line N || 到第N行
 
-" >>                        indent the current line in NORMAL MODE || Normal模式下向後縮進 
-" <<                        outdent the current line in NORMAL MODE || Normal模式下向前縮進 
-" 3>                        indent 3 times the selected lines in VISUAL MODE || Visual模式下對選中的行縮進3次
-" 2<                        outndent 2 times the selected lines in VISUAL MODE || Visual模式下對選中的行反縮進2次
+" Ctrl + n                              auto-complete in INSERT MODE || 插入模式下自动补全
 
-"***************************share vim with system clipboard, but have to install full-vim***** 
-"***************************for linxu, install vim-gnome(for gnome)*************************** 
-""*yy                       copy the whole line to system clipboard || 复制当前行到系统粘贴板 
-"*dd                        delete the whole line and save it to the system clipboard || 删除整行并保存到系统粘贴板 
-""*p                        paste the content of system clipboard to vim || 粘贴系统粘贴板的内容到vim
+" gcc                                   comment/uncomment the current line || 注释/非注释掉当前行
+" gc                                    comment/uncomment the selected part in VISUAL MODE || 注释/非注释掉VISUAL模式下的文本
 
-" ClearRegisters            clear the registers || 清除寄存器
+" >>                                    indent the current line in NORMAL MODE || Normal模式下向後縮進
+" <<                                    outdent the current line in NORMAL MODE || Normal模式下向前縮進
+" 3>                                    indent 3 times the selected lines in VISUAL MODE || Visual模式下對選中的行縮進3次
+" 2<                                    outndent 2 times the selected lines in VISUAL MODE || Visual模式下對選中的行反縮進2次
+
+"***************************************share vim with system clipboard, but have to install full-vim*****
+"***************************************for linxu, install vim-gnome(for gnome)***************************
+"***************************************sudo apt-get install vim-gnome***************************
+""*yy or "+yy                           copy the whole line to system clipboard || 复制当前行到系统粘贴板
+"*dd or "+dd                            delete the whole line and save it to the system clipboard || 删除整行并保存到系统粘贴板
+""*p                                    paste the content of system clipboard to vim || 粘贴系统粘贴板的内容到vim
+
+" ClearRegisters                        clear the registers || 清除寄存器
 
 " RECOMMEND TO USE fish shell: fishshell.com, for ubuntu, install it with:
-" sudo apt-get install fish then set default shell as this fish: chsh -s
-" /usr/bin/fish
+" sudo apt-get install fish
+" then set default shell as this fish: chsh -s /usr/bin/fish
 
 
 
@@ -109,12 +121,13 @@ set magic                               " set magic for search || 用點魔法�
 set lazyredraw                          " do not update screen while executing macros
 set ignorecase                          " ignore the case || 忽略大小写
 set nowritebackup                       " no back up file when writing || 設置無備份文件
-set noswapfile                          " no swap file when writing || 設置無swap文件
 set nobackup
+set noswapfile                          " no swap file when writing || 設置無swap文件
 
 " 但是這裡有問題，在windows下會有自帶的ftpplugin也對tw進行設置，所以需要手動修改
-set textwidth=0                         " do not wrap the line hard || 超出範圍時，不插入換行符，只是以多行顯示
 set wrap linebreak                      " set wrap and break line softly, do not wrap the line hard || 當超出屏幕範圍時，自動以不插入換行符的形式換行
+set textwidth=0                         " do not wrap the line hard || 超出範圍時，不插入換行符，只是以多行顯示
+set wrapmargin=0
 set wrapscan                            " keep searching when meet the file border || 搜索到文件兩端時重新搜索
 set autochdir                           " set current directory as root directory of file explorer || 設定文件瀏覽器目錄為當前目錄
 
@@ -161,10 +174,10 @@ map nt :NERDTreeToggle<CR>
 map tb :TagbarToggle<CR>
 
 " tt                    new line below || 在光標下面創建新一行
-map tt A<CR><ESC>0
+map tt o<ESC>
 
 " TT                    new line above || 在光標上面創建新一行
-map TT kA<CR><ESC>0
+map TT O<ESC>
 
 
 
@@ -204,7 +217,7 @@ endfunction
 """"""""""""""""""""""""""""""""auto correct""""""""""""""""""""""""""""""""
 " ABBREVIATIONS
 iab seperate separate
-iab teh th
+iab teh the
 
 
 
@@ -220,7 +233,7 @@ let g:NERDTreeWinSize = 40
 
 
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
-function! ClearRegisters() 
+function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
     let i=0 
     while (i<strlen(regs))
