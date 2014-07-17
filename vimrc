@@ -216,13 +216,6 @@ endfunction
 
 
 
-""""""""""""""""""""""""""""""""rainbow parans""""""""""""""""""""""""""""""""
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-
 """"""""""""""""""""""""""""""""auto correct""""""""""""""""""""""""""""""""
 " ABBREVIATIONS
 iab seperate separate
@@ -240,6 +233,13 @@ let g:tagbar_show_linenumbers = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeWinSize = 40 
 
+"""""""""""""""" Rainbow parans
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"""""""""""""""" clojure-static
 
 
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
