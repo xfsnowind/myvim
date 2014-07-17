@@ -39,6 +39,20 @@ Bundle 'mattn/emmet-vim'
 " vim-scripts repos
 " Bundle 'L9'
 
+
+"****************************************for clojure************************************
+"from this tutorial: www.neo.com/2014/02/25/getting-started-with-clojure-in-vim
+"
+" syntax highlight for clojure/clojurescript and relative configuration
+Bundle 'guns/vim-clojure-static'
+
+
+" connect repl
+Bundle 'tpope/vim-fireplace'
+"****************************************for clojure************************************
+
+
+
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 
