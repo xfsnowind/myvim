@@ -184,11 +184,11 @@ map TT O<ESC>
 
 
 """"""""""""""""""""""""""""""""quota and bracket match settings 引号 && 括号自动匹配""""""""""""""""""""""""""""""""
-":inoremap ( ()<ESC>i
+:inoremap ( ()<ESC>i
 
 :inoremap ) <c-r>=ClosePair(')')<CR>
 
-" :inoremap { {}<ESC>i<CR><ESC>kA<CR>
+:inoremap { {}<ESC>i<CR><ESC>kA<CR>
 
 :inoremap } <c-r>=ClosePair('}')<CR>
 
