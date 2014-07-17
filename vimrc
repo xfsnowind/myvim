@@ -28,9 +28,11 @@
 " 3>                                    indent 3 times the selected lines in VISUAL MODE || Visual模式下對選中的行縮進3次
 " 2<                                    outndent 2 times the selected lines in VISUAL MODE || Visual模式下對選中的行反縮進2次
 
-"***************************************share vim with system clipboard, but have to install full-vim*****
-"***************************************for linxu, install vim-gnome(for gnome)***************************
-"***************************************sudo apt-get install vim-gnome***************************
+
+"                                       share vim with system clipboard, but have to install full-vim
+"                                       for linxu, install vim-gnome(for gnome)
+"                                       sudo apt-get install vim-gnome
+
 ""*yy or "+yy                           copy the whole line to system clipboard || 复制当前行到系统粘贴板
 "*dd or "+dd                            delete the whole line and save it to the system clipboard || 删除整行并保存到系统粘贴板
 ""*p                                    paste the content of system clipboard to vim || 粘贴系统粘贴板的内容到vim
@@ -214,6 +216,13 @@ endfunction
 
 
 
+""""""""""""""""""""""""""""""""rainbow parans""""""""""""""""""""""""""""""""
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+
 """"""""""""""""""""""""""""""""auto correct""""""""""""""""""""""""""""""""
 " ABBREVIATIONS
 iab seperate separate
@@ -222,6 +231,7 @@ iab teh the
 
 
 """"""""""""""""""""""""""""""""plugin setting 插件配置""""""""""""""""""""""""""""""""
+
 """""""""""""""" tagbar
 let g:tagbar_autofocus = 1
 let g:tagbar_show_linenumbers = 1
