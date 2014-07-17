@@ -1,5 +1,3 @@
-
-
 if has('win32') || has('win64')
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc('~/.vim/bundle/')
@@ -34,6 +32,9 @@ Bundle 'editorconfig/editorconfig-vim'
 
 " fast write html/css tags
 Bundle 'mattn/emmet-vim'
+
+" rainbow parenthese from light table
+Bundle 'kien/rainbow_parentheses.vim'
 
 " original repos on github
 " vim-scripts repos
