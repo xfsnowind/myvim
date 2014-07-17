@@ -29,13 +29,22 @@
 " 2<                                    outndent 2 times the selected lines in VISUAL MODE || Visual模式下對選中的行反縮進2次
 
 
-"                                       share vim with system clipboard, but have to install full-vim
-"                                       for linxu, install vim-gnome(for gnome)
-"                                       sudo apt-get install vim-gnome
-
+" share vim with system clipboard, but have to install full-vim
+" for linxu, install vim-gnome(for gnome)
+" sudo apt-get install vim-gnome
 ""*yy or "+yy                           copy the whole line to system clipboard || 复制当前行到系统粘贴板
 "*dd or "+dd                            delete the whole line and save it to the system clipboard || 删除整行并保存到系统粘贴板
 ""*p                                    paste the content of system clipboard to vim || 粘贴系统粘贴板的内容到vim
+
+
+" Commands for vim-fireplace for clojure repl
+" Start vim from the same directory you ran lein repl from and it will automatically detect the nREPL host/port info, or use :Connect in Vim.
+" K                                     gives you documentation for symbol under cursor.
+" cpr                                   (require :reload) the current namespace
+" cpR                                   (require :reload-all) the current namespace
+" :Eval                                 Run this command in the test codes, evaluate arbitrary Clojure code in the current namespace.
+
+
 
 " ClearRegisters                        clear the registers || 清除寄存器
 
