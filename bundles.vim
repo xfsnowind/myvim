@@ -11,6 +11,9 @@ endif
 " required! 
 Bundle 'gmarik/vundle'
 
+" search text in multiple files
+Bundle 'mileszs/ack.vim'
+
 " My Bundles here:
 " for system file tree
 Bundle 'scrooloose/nerdtree'
