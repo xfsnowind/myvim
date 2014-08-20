@@ -39,6 +39,12 @@ Bundle 'mattn/emmet-vim'
 " rainbow parenthese from light table
 Bundle 'kien/rainbow_parentheses.vim'
 
+" handle the parenthese
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
+
+" smart and hightlight search
+Bundle 'Lokaltog/vim-easymotion'
+
 " original repos on github
 " vim-scripts repos
 " Bundle 'L9'
