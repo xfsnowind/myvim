@@ -241,6 +241,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:NERDTreeWinSize = 40 
 
 
+"""""""""""""""" easymotion
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
 
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
 function! ClearRegisters()
