@@ -42,6 +42,7 @@
 " K                                     gives you documentation for symbol under cursor.
 " cpr                                   (require :reload) the current namespace
 " cpR                                   (require :reload-all) the current namespace
+" cpp                                   evaluates the inner-most expression containing the cursor
 " :Eval                                 Run this command in the test codes, evaluate arbitrary Clojure code in the current namespace.
 
 
