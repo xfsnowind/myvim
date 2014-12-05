@@ -41,6 +41,9 @@ Bundle 'kien/rainbow_parentheses.vim'
 
 " handle the parenthese
 Bundle 'tpope/vim-sexp-mappings-for-regular-people'
+Bundle 'guns/vim-sexp'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
 
 " smart and hightlight search
 Bundle 'Lokaltog/vim-easymotion'

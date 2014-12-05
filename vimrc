@@ -58,9 +58,8 @@ source ~/.vim/bundles.vim   " get and install all the plugins in windows || 為w
 
 
 """"""""""""""""""""""""""""""language setting"""""""""""""""""""""""""""""
-set fenc=utf-8 
-set encoding=utf-8
-" 解决菜单乱码
+set fenc=utf-8
+set encoding=utf-8          " 解决菜单乱码
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 language message zh_CN.UTF-8
@@ -97,8 +96,7 @@ endif
 
 
 """"""""""""""""""""""""""""""file global settings""""""""""""""""""""""""""""""""
-set background=dark                     " set background color
-"設置背景顏色
+set background=dark                     " set background color || 設置背景顏色
 
 set tabstop=4                           " set width of tab key || 設置tab鍵寬度
 set expandtab                           " convert tab to space || 轉換tab鍵為空格
@@ -106,7 +104,7 @@ set shiftwidth=4                        "
 set autoindent                          " indent auto || 自動對齊
 set smartindent                         " smart indent || 只能對齊
 set esckeys                             " allow usage of cursor keys within insert mode
-set backspace=2                         " set back space, check "help backspace" || 設置退格鍵可用
+set backspace=2                         " set back space, check 'help backspace' || 設置退格鍵可用
 set ff=unix                             " set file type as unix to avoid showing
 
 set ai                                  " turn on auto indentation || 打开自动缩进
@@ -246,6 +244,7 @@ let g:NERDTreeWinSize = 40
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
+
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
 function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
@@ -255,5 +254,5 @@ function! ClearRegisters()
         let i=i+1
     endwhile
 endfunction
- 
+
 command! ClearRegisters call ClearRegisters()
