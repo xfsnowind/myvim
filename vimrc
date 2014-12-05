@@ -29,9 +29,16 @@
 " 2<                                    outndent 2 times the selected lines in VISUAL MODE || Visual模式下對選中的行反縮進2次
 
 
-"                                       share vim with system clipboard, but have to install full-vim
-"                                       for linxu, install vim-gnome(for gnome)
-"                                       sudo apt-get install vim-gnome
+" check the usage of vim-sexp mapping for regular people, here: https://github.com/tpope/vim-sexp-mappings-for-regular-people
+" It's awesome. Its commands includes:
+" >f                                    move a form
+" >(
+" dsf                                   splice (delete surroundings of form)
+
+
+" share vim with system clipboard, but have to install full-vim for linxu, install vim-gnome(for gnome)
+" `sudo apt-get install vim-gnome`
+
 
 ""*yy or "+yy                           copy the whole line to system clipboard || 复制当前行到系统粘贴板
 "*dd or "+dd                            delete the whole line and save it to the system clipboard || 删除整行并保存到系统粘贴板
