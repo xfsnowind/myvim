@@ -177,7 +177,6 @@ filetype plugin on                     " load different plugins for different fi
 filetype plugin indent on              " enable indent || 啟用自動補全
 
 
-
 """""""""""""""""""""""""""""""hot key settings"""""""""""""""""""""""""""""""
 " jj                    save file and stay INSERT MODE (use in INSERT MODE) || 保存文件并留在插入模式[]插入模式]
 imap jj <ESC>:w<CR>li
@@ -261,6 +260,9 @@ au Syntax * RainbowParenthesesLoadBraces
 " Gif config
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+
+"""""""""""""""" cljx
+autocmd BufNewFile,BufReadPost *.cljx setfiletype clojure
 
 
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
