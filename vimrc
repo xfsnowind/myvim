@@ -153,6 +153,7 @@ set laststatus=2                        " open status line || 開啟狀態欄信
 set cmdheight=2                         " set command line's height, default 1, here 2 || 設置命令行高度,默認是1,這裡為2
 set showcmd                             " show current uncompleted command || 顯示未完成的命令
 set showmode                            " show the current mode || 顯示當前命令
+set ruler                               " show the status of line selected || 顯示當前行信息
 set title                               " title for xterm windows
 set guioptions+=r                       " show the right side scroll bar || 顯示右側滾動欄
 set list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×   " show invisible chars
@@ -175,6 +176,7 @@ syntax on                              " detect file type || 打開文件類型�
 filetype indent on                     " set different indent for different file types || 根據不同的文件類型採用不同的縮進
 filetype plugin on                     " load different plugins for different file types || 根據不同的文件類型加載不同的插件
 filetype plugin indent on              " enable indent || 啟用自動補全
+
 
 
 """""""""""""""""""""""""""""""hot key settings"""""""""""""""""""""""""""""""
