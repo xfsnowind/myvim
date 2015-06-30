@@ -48,6 +48,10 @@ Bundle 'tpope/vim-surround'
 " smart and hightlight search
 Bundle 'Lokaltog/vim-easymotion'
 
+" color scheme monokai
+Bundle 'sickill/vim-monokai'
+
+
 " original repos on github
 " vim-scripts repos
 " Bundle 'L9'

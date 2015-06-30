@@ -105,7 +105,7 @@ endif
 " Checkout it with svn and open the file svn/html/index-html.html
 
 if has("gui_running")
-    colorscheme darkZ
+    colorscheme monokai
 elseif &t_Co >= 256
     colorscheme desert
 else
@@ -262,9 +262,6 @@ au Syntax * RainbowParenthesesLoadBraces
 " Gif config
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-
-"""""""""""""""" cljx
-autocmd BufNewFile,BufReadPost *.cljx setfiletype clojure
 
 
 """"""""""""""""""""""""""""""""customed commands 自定義命令""""""""""""""""""""""""""""""""
