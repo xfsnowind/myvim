@@ -105,7 +105,7 @@ endif
 " Checkout it with svn and open the file svn/html/index-html.html
 
 if has("gui_running")
-    colorscheme darkZ
+    colorscheme monokai
 elseif &t_Co >= 256
     colorscheme desert
 else
@@ -153,6 +153,7 @@ set laststatus=2                        " open status line || 開啟狀態欄信
 set cmdheight=2                         " set command line's height, default 1, here 2 || 設置命令行高度,默認是1,這裡為2
 set showcmd                             " show current uncompleted command || 顯示未完成的命令
 set showmode                            " show the current mode || 顯示當前命令
+set ruler                               " show the status of line selected || 顯示當前行信息
 set title                               " title for xterm windows
 set guioptions+=r                       " show the right side scroll bar || 顯示右側滾動欄
 set list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×   " show invisible chars
