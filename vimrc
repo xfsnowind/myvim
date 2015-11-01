@@ -116,9 +116,9 @@ endif
 """"""""""""""""""""""""""""""file global settings""""""""""""""""""""""""""""""""
 set background=dark                     " set background color || 設置背景顏色
 
-set tabstop=4                           " set width of tab key || 設置tab鍵寬度
+set tabstop=2                           " set width of tab key || 設置tab鍵寬度
 set expandtab                           " convert tab to space || 轉換tab鍵為空格
-set shiftwidth=4                        " 
+set shiftwidth=2                        " 
 set autoindent                          " indent auto || 自動對齊
 set smartindent                         " smart indent || 只能對齊
 set esckeys                             " allow usage of cursor keys within insert mode
